@@ -339,6 +339,13 @@ def _keyUp(key):
             ctypes.windll.user32.keybd_event(vk_mod, 0, KEYEVENTF_KEYUP, 0) #
 
 
+def copyWindows():
+    """  Copied text for Windows """
+    hotKey("ctrl", "c")
+def copyMac():
+    """Copies text for Mac"""
+    hotKey("cmd", "c")
+            
 def _position():
     """Returns the current xy coordinates of the mouse cursor as a two-integer
     tuple by calling the GetCursorPos() win32 function.
